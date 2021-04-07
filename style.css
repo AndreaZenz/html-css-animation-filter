@@ -16,7 +16,7 @@
     transition: width 1s;
 }
 .ex-2-square:active{
-    width: 400px
+    width: 800px
 }
 
 .ex-3-square {
@@ -49,7 +49,7 @@
     width: 60px;
     height: 60px;
     background: red;
-    transition: width 1s height 1s;
+    transition: all 2s;
 }
 .ex-5-square:hover{
     width: 100px;
@@ -70,12 +70,15 @@
 .ex-7-img{
     transition: 4s;
 }
-.ex-7-img{
-    filter: saturate(20%) contrast(200%);
+.ex-7-img:hover {
+    filter: grayscale(.9) sepia(.7);
 }
 .ex-8-img{
-    filter: opacity(30%) sepia(100%);
+    transition: all 1s;
+}
+.ex-8-img:hover{
     border-radius: 20%;
+    filter: opacity(30%) sepia(100%);
 }
 
 .ex-9-img {
@@ -104,13 +107,18 @@
 }
 
 .ex-11-icon:hover{
-    animation: spinningTime 1s ease-out infinite;
-    animation-direction: alternate-reverse;
+    animation: spinningTime 2s linear;
 }
 
 @keyframes spinningTime{
     0%{
-        transform: rotate(1turn)
+        transform: rotate(0)
+    }
+    90% {
+        transform: rotate(315deg);
+    }
+    100% {
+        transform: rotate(0);
     }
 }
 
